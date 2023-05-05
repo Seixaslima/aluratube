@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Search from './Components/Search'
+import Switch from './Components/Switch'
 
 const StyledMenu = styled.header`
   display: flex;
@@ -24,12 +26,17 @@ const StyledMenu = styled.header`
   }
 `
 
-export default function Menu() {
+export default function Menu({ tituloDoVideo, setTituloDoVideo }) {
+  const valorDaBusca = tituloDoVideo
+  const setValorDaBusca = setTituloDoVideo
+
   return (
     <StyledMenu>
       <div>
         <Logo />
       </div>
+      <Search valorDaBusca={valorDaBusca} setvalorDaBusca={setValorDaBusca} />
+      <Switch />
     </StyledMenu>
   )
 }
