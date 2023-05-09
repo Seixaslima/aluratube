@@ -1,7 +1,6 @@
 import React from 'react'
 import config from '../config.json'
 import styled from 'styled-components'
-import { CSSReset } from '../src/components/CSSReset'
 import Menu from '../src/components/Menu'
 import { StyledTimeline } from '../src/components/Timeline'
 
@@ -10,7 +9,6 @@ function HomePage() {
 
   return (
     <>
-      <CSSReset />
       <div>
         <Menu
           tituloDoVideo={tituloDoVideo}
@@ -24,6 +22,8 @@ function HomePage() {
 }
 
 const StyledHeader = styled.div`
+  background-color: ${({ theme }) => theme.backgroundLevel1};
+
   img {
     height: 80px;
     width: 80px;
@@ -38,11 +38,10 @@ const StyledHeader = styled.div`
   }
 `
 const StyledBanner = styled.div`
-width: 100%
-background-color: red;
-background-image: url('https://plus.unsplash.com/premium_photo-1673960921809-c663b3e60788?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80');
-// background-repeat: no-repeat;
-height: 320px;
+  width: 100%
+  background-color: red;
+  background-image: url('https://plus.unsplash.com/premium_photo-1673960921809-c663b3e60788?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80');
+  height: 320px;
 `
 
 function Header() {

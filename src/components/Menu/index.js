@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Search from './Components/Search'
 import Switch from './Components/Switch'
+import DarkModeSwitch from './Components/DarkModeSwitch'
 
 const StyledMenu = styled.header`
   display: flex;
@@ -36,7 +37,7 @@ export default function Menu({ tituloDoVideo, setTituloDoVideo }) {
         <Logo />
       </div>
       <Search valorDaBusca={valorDaBusca} setvalorDaBusca={setValorDaBusca} />
-      <Switch />
+      <DarkModeSwitch />
     </StyledMenu>
   )
 }
